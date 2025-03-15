@@ -1,0 +1,24 @@
+### mostrar todos los usuarios
+GET http://localhost:3000/usuarios
+### mostrar un usuario
+GET http://localhost:3000/usuarios/1
+### crear un usuario
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+    "usuario": "josejd2",
+    "email": "josejd2@example.com",
+    "password": "123456"
+}
+### actualizar usuario
+PUT http://localhost:3000/usuarios/5
+Content-Type: application/json
+
+{
+    "usuario": "Tim Burton",
+    "email": "tim.burton@example.com",
+    "password": "123456"
+}
+### borrar usuario
+DELETE http://localhost:3000/usuarios/5

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>CRUD Database</h1>
+        <div class="table-responsive">
+            <table id="usuarios" class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Activo</th>
+                        <th scope="col">Fecha de creación</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <!-- Botón para mostrar/ocultar el formulario con Bootstrap Collapse -->
+            <button class="btn btn-primary btn-sm" data-bs-toggle="collapse" data-bs-target="#insertarUsuario" aria-expanded="false" aria-controls="insertarUsuario"><i class="bi bi-person-plus-fill"></i></button>
+            <div class="mt-2 collapse" id="insertarUsuario">
+                <input type="text" id="user" placeholder="Escribe el nombre" required>
+                <input type="password" id="password" placeholder="Escribe la contraseña" required>
+                <input type="email" id="email" placeholder="Escribe el email" required>
+                <button class="btn btn-primary btn-sm" onclick="añadirUsuario()">Insertar Usuario</button>
+            </div>
+            <div id="mensajes">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (con Popper.js) desde node_modules -->
+    <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
